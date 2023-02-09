@@ -1,0 +1,21 @@
+{
+  "name": "doyeon_k_chatapp",
+  "version": "1.0.0",
+  "description": "Chat App with node and express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [
+    "chat",
+    "socket",
+    "node",
+    "express"
+  ],
+  "author": "DYK",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.5.4"
+  }
+}
