@@ -5,13 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/css/main.css'/>
-  <title>Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <title>Chat App</title>
 </head>
 <body>
-  <h1>Chat App</h1>
+  <h1 class="hidden">Chat App</h1>
 
   <main id="app">
-    <section>
+    <section class="left__box">
       <h2>Input Messages here:</h2>
       <input id="nickname" v-model="nickname" type="text" placeholder="Nickname?">
       <form>
@@ -21,7 +24,7 @@
       </form>
     </section>
 
-    <section class="message">
+    <section class="message right__box">
       <h2>Received Messages here:</h2>
       <ul id="messages">
         <!-- render a new message component for every message -->
