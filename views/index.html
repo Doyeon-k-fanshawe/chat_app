@@ -16,7 +16,17 @@
   <main id="app">
     <section class="left__box">
       <h2>Input Messages here:</h2>
-      <input id="nickname" v-model="nickname" type="text" placeholder="Nickname?">
+      <label>What is your Name/Nickname?</label>
+      <input id="nickname" v-model="nickname" type="text" placeholder="Name/Nickname">
+      <div class="pickone">
+        <label>Choose your Characters</label>
+        <div class="pickAvatar">
+          <img src="/images/fox.png" alt="Character 1">
+          <img src="/images/rac.png" alt="Character 1">
+          <img src="/images/owl.png" alt="Character 1">
+          <img src="/images/hed.png" alt="Character 1">
+        </div>
+      </div>
       <form>
         <label for="message">Something to say?</label>
         <textarea @focus="catchTextFocus" v-model="message" id="textarea" class="message" autocomplete="off"></textarea>

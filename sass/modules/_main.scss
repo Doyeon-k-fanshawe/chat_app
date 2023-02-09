@@ -12,7 +12,7 @@
 }
 
 .left__box h2 {
-  margin-bottom: .5em;
+  margin-bottom: 1.2em;
 }
 
 .left__box label {
@@ -20,7 +20,25 @@
 }
 
 .left__box form {
-  margin-top: 1.2em;
+  margin-top: 2em;
+}
+
+.pickone {
+  margin-top: 2em;
+  margin-bottom: .5em;
+}
+
+.pickAvatar {
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pickAvatar img {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-light-gray);
 }
 
 // Right side
@@ -39,8 +57,22 @@
   clear: both;
 }
 
-.chat-messages h3 {
+.msg_up {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+
+.msg_up img {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-light-gray);
+  margin-right: .5em;
+}
+
+.msg_up h3 {
   margin-bottom: 1.2em;
+  margin-top: 1em;
 }
 
 .chat-messages h2 {

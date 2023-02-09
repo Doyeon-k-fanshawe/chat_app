@@ -4,8 +4,13 @@ export default {
 
   template: `
     <article class="chat-messages" :class="{'other-messages' : matchedID }">
-      <h3>{{ message.name }} says:</h3>
-      <h2>{{ message.content }}</h2>
+      <div class="msg_up">
+        <img src="./images/" alt="User Image">
+        <h3>{{ message.name }} says:</h3>
+      </div>
+      <div class="msg_down">
+        <h2>{{ message.content }}</h2>
+      </div>
     </article>
   `,
 
