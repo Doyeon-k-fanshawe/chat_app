@@ -17,7 +17,7 @@
     /* Font size */
     --font-large: 25px;
     --font-medium: 20px;
-    --font-regular: 15px;
+    --font-regular: 18px;
     --font-small: 12px;
   
     /* Font weight */
@@ -73,11 +73,11 @@
 
   label { 
     display: block; 
-    padding-bottom: 0.5em;
   }
   
   textarea { 
-    width: 90%; height: 200px; 
+    width: 400px; 
+    height: 200px; 
   }
   
   input[type="submit"] { 
