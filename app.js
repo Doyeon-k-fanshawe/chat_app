@@ -22,7 +22,7 @@ server.listen(port, () => {
 
 // socket.io stuff goes here
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  console.log(socket.id + ' connected now.');
   socket.emit('connected', {sID: socket.id, message: 'new connection'});
 
   // listen for incoming message from ANYone connected to the chat service
@@ -40,4 +40,17 @@ io.on('connection', (socket) => {
 
     io.emit('typing', { currentlytyping: user });
   })
+
+  // when disconnected
+  socket.on('disconnect', () => {
+    // console.log('A user disconnected');
+    // clearInterval(socket.interval);
+
+    console.log(socket.id + " disconnected now.")
+    socket.broadcast.emit('broadcast', { 
+      type: 'disconnected', 
+      name: 'Server', 
+      newmsg: socket.id + " just came out the chat room." });
+  });
+
 });

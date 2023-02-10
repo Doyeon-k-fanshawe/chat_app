@@ -21,10 +21,9 @@
       <div class="pickone">
         <label>Choose your Characters</label>
         <div class="pickAvatar">
-          <img src="/images/fox.png" alt="Character 1">
-          <img src="/images/rac.png" alt="Character 1">
-          <img src="/images/owl.png" alt="Character 1">
-          <img src="/images/hed.png" alt="Character 1">
+          <div v-for="(picture, index) in pictures">
+            <img :src="picture" @click="changeActivePic(index)" :class="{ active: index==indexOfActive ? true : flase }">
+          </div>
         </div>
       </div>
       <form>
