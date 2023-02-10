@@ -17,7 +17,7 @@ function showNewMessage({ message }) {
 }
 
 function handleUserTyping(user) {
-  console.log('somebody is typing something');
+  console.log('Somebody is typing something');
 }
 
 const { createApp } = Vue
@@ -28,7 +28,15 @@ const { createApp } = Vue
         socketID: '',
         message: '',
         messages: [],
-        nickname: ''
+        nickname: '',
+        activePic: '/images/fox.png',
+        pictures: [
+          '/images/fox.png',
+          '/images/rac.png',
+          '/images/owl.png',
+          '/images/hed.png',
+        ],
+        indexOfActive: 0
       }
     },
 
@@ -38,7 +46,7 @@ const { createApp } = Vue
         socket.emit('chat_message', {
           content: this.message,
           name: this.nickname || 'anonymous',
-          id: this.socketID
+          id: this.socketID,
         })
 
         this.message = "";
@@ -49,7 +57,13 @@ const { createApp } = Vue
         socket.emit('user_typing', {
           name: this.nickname || 'anonymous'
         })
+      },
+
+      changeActivePic(index) {
+        this.activePic = this.pictures[index];
+        this.indexOfActive = index;
       }
+
     },
 
     components: {

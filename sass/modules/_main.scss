@@ -63,11 +63,15 @@
   margin-bottom: 1em;
 }
 
-.msg_up img {
+.picture img {
   width: 60px;
   height: 60px;
   background-color: var(--color-light-gray);
   margin-right: .5em;
+}
+
+.active {
+  border: 2px solid var(--color-pink);
 }
 
 .msg_up h3 {
