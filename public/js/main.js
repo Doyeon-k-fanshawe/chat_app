@@ -18,6 +18,8 @@ function showNewMessage({ message }) {
 
 function handleUserTyping(user) {
   console.log('Somebody is typing something');
+  vm.typing = "Somebody is typing something now"
+  vm.status = "online";
 }
 
 const { createApp } = Vue
@@ -36,7 +38,9 @@ const { createApp } = Vue
           '/images/owl.png',
           '/images/hed.png',
         ],
-        indexOfActive: 0
+        indexOfActive: 0,
+        status: '',
+        typing: ''
       }
     },
 

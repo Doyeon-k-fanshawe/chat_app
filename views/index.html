@@ -39,7 +39,7 @@
             <img class="profile-pic" src="./images/profile.png" width="40" height="40">
             <div class="info-block">
               <p class="username">{{ nickname }}</p>
-              <p class="status">online</p>
+              <p class="status">{{ status }}</p>
             </div>
           </div>
           <div class="call-box">
@@ -51,7 +51,9 @@
             </button>
           </div>
         </div>
-
+        <div class="status__typing">
+          <p class="status">{{ typing }}</p>
+        </div>
         <ul id="messages" class="chat-box">
           <!-- render a new message component for every message -->
           <newmsg v-for="message in messages" :message="message"></newmsg>

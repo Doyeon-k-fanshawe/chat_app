@@ -1,5 +1,6 @@
 
 .container {
+  margin-top: 2em;
 	position: relative;
 	width: 640px;
 	height: 840px;
@@ -100,4 +101,10 @@
   height: 120px;
   width: 50px;
   background-color: var(--color-lavender);
+}
+
+.status__typing {
+  margin: auto;
+  text-align: center;
+  padding: 10px;
 }
