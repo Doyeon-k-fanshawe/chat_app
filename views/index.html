@@ -22,23 +22,49 @@
         <label>Choose your Characters</label>
         <div class="pickAvatar">
           <div v-for="(picture, index) in pictures">
-            <img :src="picture" @click="changeActivePic(index)" :class="{ active: index==indexOfActive ? true : flase }">
+            <img :src="picture" @click="changeActivePic(index)" :class="{ active: index==indexOfActive ? true : false }">
           </div>
         </div>
       </div>
-      <form>
-        <label for="message">Something to say?</label>
-        <textarea @focus="catchTextFocus" v-model="message" id="textarea" class="message" autocomplete="off"></textarea>
-        <input @click.prevent="dispatchMessage" type="submit" value="Send">
-      </form>
     </section>
 
-    <section class="message right__box">
-      <h2>Received Messages here:</h2>
-      <ul id="messages">
-        <!-- render a new message component for every message -->
-        <newmsg v-for="message in messages" :message="message"></newmsg>
-      </ul>
+    <section class="message container">
+      <!-- <h2>Received Messages here:</h2> -->
+      <div class="container__box">
+        <div class="header">
+          <div class="right__info">
+            <button class="back-btn">
+              <img src="./images/left-arrow.png" width="30" height="30">  
+            </button>
+            <img class="profile-pic" src="./images/profile.png" width="40" height="40">
+            <div class="info-block">
+              <p class="username">{{ nickname }}</p>
+              <p class="status">online</p>
+            </div>
+          </div>
+          <div class="call-box">
+            <button>
+              <img src="./images/phone-call.png" width="20" height="20">
+            </button>
+            <button>
+              <img src="./images/video-call.png" width="20" height="20">
+            </button>
+          </div>
+        </div>
+
+        <ul id="messages" class="chat-box">
+          <!-- render a new message component for every message -->
+          <newmsg v-for="message in messages" :message="message"></newmsg>
+        </ul>
+
+        <form class="footer">
+          <label class="hidden" for="message">Something to say?</label>
+          <textarea @focus="catchTextFocus" v-model="message" id="textarea" class="message" autocomplete="off" placeholder="Type a message" autofocus="true"></textarea>
+          <button id="send">
+            <img src="./images/send.png" width="24" height="24" @click.prevent="dispatchMessage" type="submit" value="Send">  
+          </button>
+        </form>
+      </div>
     </section>
   </main>
 

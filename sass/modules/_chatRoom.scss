@@ -1,0 +1,103 @@
+
+.container {
+	position: relative;
+	width: 640px;
+	height: 840px;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px #333333;
+	background-color: var(--color-yellow);
+	overflow: hidden;
+}
+
+.container__box {
+  position: relative;
+	width: 580px;
+	height: 780px;
+	border-radius: 15px;
+	background-color: var(--color-white);
+	overflow: hidden;
+}
+
+.header {
+	display: flex;
+	height: 60px;
+  width: 100%;
+	padding: 12px 5px 8px;
+	align-items: center;
+	box-shadow: 0 0 4px #999999;
+  background-color: var(--color-beige);
+  justify-content: space-between;
+}
+
+.right__info {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-block {
+	margin-left: 12px;
+	margin-right: 95px;
+}
+
+.username {
+	margin: 0 0 5px;
+}
+
+.status {
+	margin: 0;
+	font-size: 12px;
+	color: var(--color-pink);
+}
+
+.call-box {
+	display: flex;
+	width: 60px;
+
+}
+
+.chat-box {
+	width: 580px;
+	height: 780px;
+	padding: 12px 10px;
+	overflow: scroll;
+}
+
+.bubble {
+	margin: 5px 0;
+	display: inline-block;
+	max-width: 300px;
+	font-size: 14px;
+	position: relative;
+}
+
+.friend-bubble {
+	background-color: #f3f0f5;
+	border-radius: 14px 14px 14px 0;
+	padding: 7px 15px 7px 15px;
+	float: left;
+	clear: both;
+	color: #8f00fe;
+}
+
+.my-bubble {
+	background-color: #8f00fe;
+	border-radius: 14px 14px 14px 0;
+	padding: 7px 15px 7px 15px;
+	float: right;
+	clear: both;
+	color: #ffffff;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: absolute;
+	bottom: 0;
+}
+
+#send {
+  height: 120px;
+  width: 50px;
+  background-color: var(--color-lavender);
+}
