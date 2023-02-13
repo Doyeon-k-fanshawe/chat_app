@@ -6,8 +6,8 @@ export default {
     <article class="chat-messages" :class="{'other-messages' : matchedID }">
       <div class="msg_up">
         <div class="picture">
-          <img :src="activePic">
-        </div>  
+          <img src="/images/rabbit.png" alt="Profile Images">
+        </div>
         <h3>{{ message.name }} says:</h3>
       </div>
       <div class="msg_down">
@@ -19,7 +19,6 @@ export default {
   data() {
     return {
       message: 'hello from the template', 
-      activePic: '/images/fox.png',
       // every time an incoming message arrives, check against the user ID to see if this is ours.
       // if it IS, apply a CSS class to indicate that it's ours.
       // if it ISN'T, apply a different CSS class to make that obvious.

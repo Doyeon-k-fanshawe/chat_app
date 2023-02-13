@@ -36,7 +36,9 @@
             <button class="back-btn">
               <img src="./images/left-arrow.png" width="30" height="30">  
             </button>
-            <img class="profile-pic" src="./images/profile.png" width="40" height="40">
+            <div class="profile-pic">
+              <img :src="activePic" alt="Characters Images">
+            </div>  
             <div class="info-block">
               <p class="username">{{ nickname }}</p>
               <p class="status">{{ status }}</p>
@@ -52,7 +54,8 @@
           </div>
         </div>
         <div class="status__typing">
-          <p class="status">{{ typing }}</p>
+          <p class="status">User is {{ connectstatus }}</p>
+          <p class="con__status">{{ typing }}</p>
         </div>
         <ul id="messages" class="chat-box">
           <!-- render a new message component for every message -->
