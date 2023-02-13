@@ -42,15 +42,17 @@ io.on('connection', (socket) => {
   })
 
   // when disconnected
-  socket.on('disconnect', () => {
-    // console.log('A user disconnected');
-    // clearInterval(socket.interval);
-
+  socket.on('disconnect', function(discon) {
     console.log(socket.id + " disconnected now.")
-    socket.broadcast.emit('broadcast', { 
-      type: 'disconnected', 
-      name: 'Server', 
-      newmsg: socket.id + " just came out the chat room." });
+    clearInterval(socket.interval);
+
+    io.emit('disconnected', { noconnection: discon });
+
+  //   console.log(socket.id + " disconnected now.")
+  //   socket.broadcast.emit('broadcast', { 
+  //     type: 'disconnected', 
+  //     name: 'Server', 
+  //     statusdis: socket.id + " just came out the chat room." });
   });
 
 });

@@ -18,10 +18,27 @@ function showNewMessage({ message }) {
 }
 
 function handleUserTyping(user) {
+  console.log(user);
   console.log('Somebody is typing something');
   vm.typing = "Somebody is typing something now"
   vm.status = "online";
 }
+
+function showDisConnectStatus(discon) {
+  console.log(discon);
+  console.log('Someone is disconnected now.');
+  vm.disconnect = "Disconnected";
+
+  let hiddentext = document.querySelector(".discon__status");
+
+  hiddentext.classList.add("hiddenbox");
+
+  setTimeout(function(){
+    hiddentext.classList.remove("hiddenbox");
+  }, 5000);
+}
+
+// function showCon
 
 const { createApp } = Vue
 
@@ -42,7 +59,8 @@ const { createApp } = Vue
         indexOfActive: 0,
         status: '',
         typing: '',
-        connectstatus: ''
+        connectstatus: '',
+        disconnect: '',
       }
     },
 
@@ -69,7 +87,6 @@ const { createApp } = Vue
         this.activePic = this.pictures[index];
         this.indexOfActive = index;
       }
-
     },
 
     components: {
@@ -80,3 +97,4 @@ const { createApp } = Vue
   socket.addEventListener('connected', setUserID);
   socket.addEventListener('new_message', showNewMessage);
   socket.addEventListener('typing', handleUserTyping);
+  socket.addEventListener('disconnected', showDisConnectStatus);

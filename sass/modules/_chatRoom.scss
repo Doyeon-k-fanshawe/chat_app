@@ -51,7 +51,16 @@
 .con__status {
   margin-top: 5px;
 	color: var(--color-green);
+}
 
+.discon__status {
+  margin-top: 5px;
+	color: var(--color-red);
+  display: none;
+}
+
+.discon__status.hiddenbox {
+  display: block;
 }
 
 .call-box {
