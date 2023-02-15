@@ -54,9 +54,9 @@
           </div>
         </div>
         <div class="status__typing">
-          <p class="status">You're {{ connectstatus }}</p>
-          <p class="con__status">{{ typing }}</p>
-          <p class="discon__status">Other User is {{ disconnect }}</p>
+          <p class="conStatus">You're {{ connectstatus }}</p>
+          <p class="discon__status">{{ nickname + disconnect }}</p>
+          <p class="con__status">{{ nickname + typing }}</p>
         </div>
         <ul id="messages" class="chat-box">
           <!-- render a new message component for every message -->

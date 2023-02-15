@@ -48,6 +48,15 @@
 	color: var(--color-pink);
 }
 
+.conStatus {
+  display: block;
+  color: var(--color-pink);
+}
+
+.conStatus.show {
+  display: none;
+}
+
 .con__status {
   margin-top: 5px;
 	color: var(--color-green);
@@ -66,7 +75,6 @@
 .call-box {
 	display: flex;
 	width: 60px;
-
 }
 
 .chat-box {
